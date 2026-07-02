@@ -1,12 +1,10 @@
 const express = require('express');
 const { GoogleGenAI } = require('@google/generative-ai');
-const { google } = require('googleapis');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-// Initialize Gemini API
-// Make sure to replace 'YOUR_GEMINI_API_KEY' with your actual key from Google AI Studio
+// Correct SDK initialization format
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 app.get('/', (req, res) => res.send('AI Automation Server is Alive 🚀'));
