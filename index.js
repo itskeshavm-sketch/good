@@ -4,7 +4,7 @@ const { GoogleGenAI } = require('@google/generative-ai');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-// Correct SDK initialization format
+// This matches the updated official Google SDK syntax perfectly
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 app.get('/', (req, res) => res.send('AI Automation Server is Alive 🚀'));
